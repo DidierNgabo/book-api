@@ -1,0 +1,29 @@
+{
+  "name": "book-api",
+  "version": "1.0.0",
+  "description": "this is a simple api which provides some endpoints to books",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ngabo Uwayo Didier",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/node": "^7.14.9",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/register": "^7.15.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
+    "pg": "^8.7.1",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.0",
+    "sequelize-cli": "^6.2.0"
+  }
+}
