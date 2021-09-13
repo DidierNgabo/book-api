@@ -1,21 +1,12 @@
 import express from 'express';
+import BookController from '../../controllers/bookController';
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.status(200).json({ books: 'all books' });
-});
-router.get('/:id', (req, res) => {
-  res.status(200).json({ books: 'one book' });
-});
-router.post('/:id', (req, res) => {
-  res.status(200).json({ books: 'post a new book' });
-});
-router.put('/:id', (req, res) => {
-  res.status(200).json({ books: 'update one book' });
-});
-router.delete('/:id', (req, res) => {
-  res.status(200).json({ books: 'delete one book' });
-});
+router.get('/', BookController.getAll);
+router.get('/:id', BookController.getOne);
+router.post('/', BookController.createOne);
+router.put('/:id', BookController.update);
+router.delete('/:id', BookController.delete);
 
 export default router;
